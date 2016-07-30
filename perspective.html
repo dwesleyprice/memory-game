@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<title></title>
+</head>
+<style>
+	#cube{
+		perspective: 200px;
+		border: 1px solid black;
+		width: 200px;
+		margin: auto;
+		margin-top: 200px;
+		perspective-origin: 5% 5%;
+	}
+
+	#red-square{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		/* transform: rotateZ(45deg); */
+		/* transform: rotateY(45deg); */
+		transition: all 3s;
+	}
+
+	.flip{
+		transform: translate(100px, 60px);
+	}
+</style>
+<body>
+
+<div id="cube">
+	<div id="red-square">
+		
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('#red-square').click(function(){
+			$('#red-square').toggleClass('flip');
+		})
+	})
+</script>
+
+</body>
+</html>

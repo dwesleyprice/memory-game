@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="card-flip.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<title></title>
+</head>
+<body>
+
+
+<!-- Outer container to make a 3d space/cube for the children -->
+<div class="mg-tile">
+	<!-- inner container to play in the 3d area, which will have its own children -->
+		<div class="mg-tile-inner">
+			<!-- font of card -->
+			<div class="mg-front"><img src="batman.svg" alt=""></div>
+			<!-- back of card -->
+			<div class="mg-back"></div>
+		</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.mg-tile-inner').click(function(){
+			$(this).toggleClass('flip');
+		})
+	})
+</script>
+
+</body>
+</html>

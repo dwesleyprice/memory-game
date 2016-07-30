@@ -1,0 +1,37 @@
+img{
+	max-width: 100%;
+}
+.mg-tile{
+/* height: 300px; */
+ perspective: 500px;
+/* min-width: 300px; */
+}
+
+.mg-tile-inner{
+ 	width: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: all .5s;
+}
+
+.mg-front, .mg-back{
+ 	position: absolute;
+	top: 0;
+	left: 0;
+	/* border: 2px solid red; */
+	/* backface-visibility: hidden; */
+}
+
+.mg-front{
+width: 100%;
+transform: rotateY(180deg);
+}
+
+.mg-back{
+background: url('logo.png') 50% 50% no-repeat;
+width: 100%;
+}
+
+.flipped{
+transform: rotateY(-180deg);
+}
